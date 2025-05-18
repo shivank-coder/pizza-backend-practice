@@ -32,6 +32,29 @@ app.post("/api/profile/user", (req, res) => {
   console.log("addres of user :", address);
   console.log("country :", country);
 });
+
+const users = [
+  {
+    id: 1,
+    name: "shivank singh",
+    position: "software developer",
+  },
+  {
+    id: 2,
+    name: "mayank singh",
+    position: "software developer",
+  },
+  {
+    id: 3,
+    name: "bhusan sonar ",
+    position: "opps group manger II",
+  },
+];
+
+app.get("/api/users", (req, res) => {
+  console.log("users list we will get from backend ");
+  res.json(users); // ✅
+});
 app.listen(PORT, () => {
   console.log(`🚀 Backend running at http://localhost:${PORT}`);
 });
